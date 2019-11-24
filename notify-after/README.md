@@ -3,7 +3,7 @@
 ## Requirements:
 
 - Linux
-  - You can use this script on mac os by replacing `send-notify` calls with the mac equivalent.  I'm not sure what that is though.  It would take maybe 2 minutes to implement though.  If you want me to implement it for you, open an issue and I'll do it.
+  - You can use this script on mac os by replacing `send-notify` calls with the mac equivalent - tt would take maybe 2 minutes to implement.  If you want me to implement it for you, open an issue and I'll do it.
   - Fuck windows (I'm not even going to bother with changing my script to run over there)
 - python 3.6+
 - `send-notify`

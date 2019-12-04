@@ -27,7 +27,7 @@ If everything is set up correctly, you should be able to run commands from your 
 
 ## Launching scripts from Wear OS smartwatch
 
-This is where things got a little tricky for me.  First off, in order to do this the way I did it, you'll need to purchase Tasker from the google play store, which costs $3.49.  From my limited experience with it, it seems like an amazing app and it's been worth the money for me.  There may be other approaches that work for free, but I didn't come across anything from my research.
+This is where things got a little tricky for me.  First off, in order to do this the way I did it, you'll need to purchase Tasker from the google play store, which costs $3.49.  From my limited experience with it, it seems like an amazing app and it's been worth the money for me.  There may be other approaches that work for free, but I didn't come across anything from my research.  However, a kind user on Reddit pointed out that it might be possible to do this with Automate or MacroDroid, which are free android applications.  I can't comment on whether or not those will work, but you can check them out if you don't want to pay the $3.49 for Tasker.
 
 Also, I don't think my solution is the best Tasker based solution.  I send a notification dialogue to my smartwatch, but ideally, you would want to map it to a hardware button on your watch.  If I get around to doing that, I'll update the README with the alternative instructions.  You may want to look at this [Reddit comment](https://www.reddit.com/r/unixporn/comments/e65cb1/ticwatch_pro_launching_scripts_from_smartwatch/f9o06bu?utm_source=share&utm_medium=web2x) that outlines an approach for doing this.
 

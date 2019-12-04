@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 i3-msg workspace number 5
-st -e /home/jake/.config/scripts/flex-setup/run-neofetch &
+st -e /home/jake/.config/scripts/watch-scripts/run-neofetch &
 sleep .6
 i3-msg split h
 st -e vim /home/jake/Projects/conf-edit/conf-edit &

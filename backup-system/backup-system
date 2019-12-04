@@ -15,6 +15,6 @@ backup_arch_btw () {
 }
 
 # remove notify-after if you do not have this script.
-../notify-after/notify-after backup_arch_btw 
-
+#/home/jake/.config/scripts/notify-after/notify-after backup_arch_btw 
+backup_arch_btw
 

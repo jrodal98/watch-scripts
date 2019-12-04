@@ -1,5 +1,7 @@
 # watch-scripts
 
+As seen on reddit: <https://www.reddit.com/r/unixporn/comments/e65cb1/ticwatch_pro_launching_scripts_from_smartwatch/?utm_source=share&utm_medium=web2x>
+
 I can launch shell scripts from my smartwatch on my linux machine using a combination of KDEConnect and Tasker (an android application).  My scripts are in this repo, as well as a guide for setting it up yourself.
 
 Launching scripts from an android device to a linux machine is fairly straightfoward, so I will explain that first.  Then, I will explain a simple approach for launching scripts on a wear OS smartwatch.

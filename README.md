@@ -8,3 +8,4 @@ A collection of a few of my miscellaneous scripts.
 - **[notify-after](notify-after):** a python shell script (and decorator) that sends a desktop notification whenever a shell process or decorated function finishes execution.
 - **[sms-decorator](sms-decorator):** a decorator that will send you a text message with details about the execution when a decorated function finishes execution.
 - **[watch-scripts](watch-scripts)**: a guide for launching shell commands from a smartwatch to a linux machine.
+- **[do-not-disturb](do-not-disturb)**: a shell script that enables and disables a do-not-disturb mode for dunst notifications.

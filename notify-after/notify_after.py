@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 # Jacob Rodal (https://www.jrodal.dev) (jr6ff@virginia.edu)
-import subprocess
-import sys
+
+from sys import stderr
+from __init__ import send_notification
 from datetime import datetime
 
 
 def notify_after(wrapped_func):
     """
     Sends a notification when some func finishes execution.
-    notify-send must be installed on your system, else it prints a message to stderr.
+    notify-send must be installed on your system, else it 
+    prints a message to stderr.
     """
-    def wrapper(*args,**kwargs):
+    def wrapper(*args, **kwargs):
         starting_time = datetime.now()
-        res = wrapped_func(*args,**kwargs)
+        res = wrapped_func(*args, **kwargs)
         ending_time = datetime.now()
         if res == "INTERNAL NOTIFY AFTER FAIL":
             return -1
@@ -25,32 +27,21 @@ def notify_after(wrapped_func):
         elif diff_report >= 60:
             diff_report /= 60  # report time in minutes
             unit = "minutes"
-        
+        elif diff_report < 1:
+            diff_report *= 1000
+            unit = "milliseconds"
+
         try:
             process = "Python"
             name = wrapped_func.__name__
             if name == "call_from_shell":
-                process = args[0][0]
-                name = " ".join(args[0])
+                name = process = args[0][1]
             title = f"{process} execution completed"
             message = f"'{name}' has finished executing after {diff_report:.4} {unit}"
-            subprocess.call(["notify-send",title,message])
-        except Exception:
-            print("python notify_after decorator failed - make sure that notify-send is installed.",file=sys.stderr)
+            send_notification(title, message)
+
+        except Exception as e:
+            print(str(e), file=stderr)
         finally:
             return res
     return wrapper
-
-@notify_after
-def call_from_shell(command):
-    try:
-        return subprocess.call(command)
-    except FileNotFoundError as e:
-        subprocess.call(["notify-send","notify-after error",str(e)])
-    except IndexError:
-        subprocess.call(["notify-send","notify-after error","shell command not provided"])
-    return "INTERNAL NOTIFY AFTER FAIL"
-
-if __name__ == "__main__":
-    call_from_shell(sys.argv[1:])
-    

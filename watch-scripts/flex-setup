@@ -1,13 +1,15 @@
 #!/usr/bin/zsh
 
+source /home/jake/.zshrc
+
 i3-msg workspace number 5
-st -e /home/jake/.config/scripts/watch-scripts/run-neofetch &
+$TERMINAL -e /home/jake/.config/scripts/watch-scripts/run-neofetch &
 sleep .6
 i3-msg split h
-st -e vim /home/jake/Projects/conf-edit/conf-edit &
+$TERMINAL -e vim /home/jake/Projects/conf-edit/conf-edit &
 sleep .6
 i3-msg focus left
 i3-msg split v
-st -e cmatrix &
+$TERMINAL -e cmatrix -C cyan &
 sleep .6
 i3-msg split h

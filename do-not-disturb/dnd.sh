@@ -24,6 +24,13 @@ turn_off_dnd() {
 
 case $1 in
 
+    state) # returns true if dnd is enabled, false otherwise
+        if [ -f $lock_file ]; then
+            true
+        else
+            false
+        fi
+        ;;
     on) # manually turn it on
         turn_on_dnd
         ;;

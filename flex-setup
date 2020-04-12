@@ -1,4 +1,7 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
+# www.jrodal.dev
+
+# for obvious reasons, you'll need to modify this :)
 
 source /home/jake/.zshrc
 

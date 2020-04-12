@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# www.jrodal.dev
+
+# Toggle lock on kde
+
+ps cax | grep kscreenlocker > /dev/null
+if [ $? -eq 0 ]; then
+    loginctl unlock-session
+else
+    loginctl lock-session
+fi
